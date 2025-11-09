@@ -1,24 +1,5 @@
 # print ('Hello World')
 #
-# while True:
-#     print('Hello ' *4)
-
-name = input('Enter your name: ')
-
-if name.lower() == 'michal':
-    print('Hello Michal, that is the best name ever ' +name.lower())
-else:
-    print('What a nice name ' + name.upper())
-#
-# surname = input('Enter your surname: ')
-# print (surname)
-# print(name)
-
-
-# print ('Enter your name: ')
-# name = input()
-#
-# print(name)
 
 print('\nHello in Flight Search Program ver.3.0 \nMomondo')
 # autor programu: Tedy07 ted.k07@gmail.com
