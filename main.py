@@ -1,7 +1,9 @@
+from multiprocessing.managers import Value
+
 print ('\nHello in Flight Search Program ver.3.0 \nMomondo')
 #autor programu: Tedy07 ted.k07@gmail.com
 # ver produkcyjna Momondo 07.11.2025 r.
-# ver.3.1.
+# ver.3.1.1.
 import webbrowser
 import time
 from datetime import datetime
@@ -36,7 +38,7 @@ if user_input == 'o':
       try:
             data=datetime.strptime(data_str, "%Y-%m-%d")
             print (f"Podana data to: {data.strftime('%d-%m-%Y')}")
-      except ValuError:
+      except ValueError:
             print("Niepoprawny format")
 
       lista = ['pl', 'es', 'dk', 'ie']
@@ -47,7 +49,7 @@ if user_input == 'o':
 
       for l in lista:
 
-          webbrowser.open("https://www.momondo."+ l+ "/flight-search/"+ skad+ "-"+ dokad+ "/"+ data_str+"?ucs=1j6tr23&sort=price_a", new=0)
+          webbrowser.get('firefox').open("https://www.momondo."+ l+ "/flight-search/"+ skad+ "-"+ dokad+ "/"+ data_str+"?ucs=1j6tr23&sort=price_a", new=0)
           time.sleep(wait_time)
           wait_time += 2
           # ('firefox')
